@@ -1,0 +1,57 @@
+html,body{
+   position: relative;
+}
+
+body{
+   overflow:auto;
+}
+
+
+.hero-image {
+  
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/hero.jpg");
+
+  
+  height: 50vh;
+  background-position: center ;
+  background-size: cover;
+  background-repeat: no-repeat;
+   text-align:center ;
+}
+
+
+#clock {
+   font-size: 50px;
+   color:  #fff;
+   font-family: 'Orbitron';
+   border: 2px solid;
+   border-radius: 10px;    
+   margin: auto;  
+}
+
+footer {
+  background: #f1f1f1;
+  width: 100%;
+  padding: 16px 0px;
+  color: #000;
+  vertical-align: bottom;
+  margin-top: 1px;
+  text-align: center;
+  width: 100%;
+
+}
+
+h1{
+   color:#ffffff;
+   font-family: 'Orbitron';
+   font-size: 80px;
+}
+
+
+#quote{
+   font-family: 'Orbitron', Courier, monospace;
+   color:#ffffff;
+   font-size: 1rem;
+   
+}

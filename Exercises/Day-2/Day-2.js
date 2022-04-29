@@ -228,3 +228,5 @@ var salarySentence = "He earns 5000 euro from salary per month, 10000 euro annua
 var gains = salarySentence.match(/[0-9]+/g)
 var totalAnnual = ( ( parseInt(gains[0]) + parseInt(gains[2]) ) * 12 ) + parseInt(gains[1])
 console.log(totalAnnual)
+
+// console.log(parseInt(gains[1]))

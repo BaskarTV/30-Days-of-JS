@@ -36,6 +36,40 @@ let quoteData = document.getElementById('quote')
 
 // console.log(quoteData)
 
+let day = document.getElementById('day');
+
+// console.log(day)
+
+// Getting day from switch case:
+
+let toDay ="";
+
+switch(new Date().getDay()){
+    case 0:
+    toDay ='Sunday';
+    break;
+    case 1:
+    toDay ='Monday';
+    break;
+    case 2:
+    toDay ='Tuesday';
+    break;
+    case 3:
+    toDay ='Wednesday';
+    break;
+    case 4:
+    toDay ='Thursday';
+    break;
+    case 5:
+    toDay ='Friday';
+    break;
+    case 6:
+    toDay ='Saturday';
+    break;
+}
+
+day.innerHTML =toDay
+
 
 // Quotes generated below using axios get method
 

@@ -52,6 +52,11 @@ h1{
 #quote{
    font-family: 'Orbitron', Courier, monospace;
    color:#ffffff;
-   font-size: 1rem;
-   
+   font-size: 1rem; 
+}
+
+#day{
+   font-family: 'Orbitron',Arial, Helvetica, sans-serif;
+   color: #ffffff;
+   margin: 10px ;
 }

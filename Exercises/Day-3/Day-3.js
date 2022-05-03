@@ -78,6 +78,74 @@ console.log(py.length)
 console.log(ja.length)
 console.log(py === ja)
 
+// Question-6  Figure out the result of the following expressions first without using console.log(). After you decide the result confirm it by using console.log()
+
+
+/*
+i. 4 > 3 && 10 < 12 //true
+ii. 4 > 3 && 10 > 12 //false
+iii. 4 > 3 || 10 < 12 //true
+iv. 4 > 3 || 10 > 12 //true
+v. !(4 > 3) //false
+vi. !(4 < 3) //true
+vii. !(false) //true
+viii. !(4 > 3 && 10 < 12) //false
+ix. !(4 > 3 && 10 > 12)//false//true
+x. !(4 === '4')// true
+xi. There is no 'on' in both dragon and python 
+*/
+
+console.log(1,4 > 3 && 10 < 12)
+console.log(2,4 > 3 && 10 > 12)
+console.log(3,4 > 3 || 10 < 12)
+console.log(4,4 > 3 || 10 > 12)
+console.log(5,!(4 > 3))
+console.log(6,!(4 < 3))
+console.log(7,!(false))
+console.log(8,!(4 > 3 && 10 < 12))
+console.log(9,!(4 > 3 && 10 > 12))
+console.log(10,!(4 === '4'))
+// There is no 'on' in both dragon and python
+console.log('python'.match(/on/))
+console.log('jagon'.match(/on/))
+
+
+// Question-7 Use the Date object to do the following activities
+
+const date = new Date();
+
+// i.What is the year today?
+   console.log(date.getFullYear())
+
+//  ii.What is the month today as a number?
+     console.log(date.getMonth()+1)
+
+// iii. What is the date today?
+      console.log(date.getDate())  
+
+//  iv. What is the day today as a numbe
+     console.log(date.getDay())
+
+// v. What is the hours now?
+      console.log(date.getHours())
+
+ // vi. What is the minutes now?
+     console.log(date.getMinutes())      
+    
+ //vii.  Find out the numbers of seconds elapsed from January 1, 1970 to now.
+    console.log(date.getTime())
+            
+// ***************Exercises: Level 2*******************************
+
+// Question-1 Write a script that prompt the user to enter base and height of the triangle and calculate an area of a triangle (area = 0.5 x b x h).
+
+// let base = prompt('Enter  base');
+// let  height = prompt('Enter height')
+// let area  = 0.5 * base * height 
+
+console.log('Promt of hegit and base')
+
+// Question-2 Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle 
 
 
 

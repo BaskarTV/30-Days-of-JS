@@ -183,5 +183,27 @@ console.log('Area of Rectangle');
 
 // console.log("The area of Circle is "+ circleArea)
 // console.log('The Circumfrence of circle is '+ circumFrence)
+
 console.log('The area of Circumfrence')
+
+// Question-9 Writ a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?
+
+// const userHour = parseInt(prompt('Enter your hours:'))
+// const rateWeek = parseInt(prompt('Enter your rate:'))
+
+// const weeklyEarn = userHour * rateWeek
+
+// console.log('Your weekly earning is ',weeklyEarn)
+
+console.log('Pay of the person')
+
+// Question-10 If the length of your name is greater than 7 say, your name is long else say your name is short.
+
+const myName = 'BaskarThangavelu'
+
+myName.length > 7
+
+?console.log('Your name is long')
+:console.log('Your name is short')
+
 

@@ -206,4 +206,73 @@ myName.length > 7
 ?console.log('Your name is long')
 :console.log('Your name is short')
 
+//Question-11 Compare your first name length and your family name length and you should get this output.
+
+/*let firstName = 'Asabeneh'
+let lastName = 'Yetayeh'
+
+Your first name, Asabeneh is longer than your family name, Yetayeh */
+
+const myFname = 'BaskarThangavelu'//name modified for checking output
+const myFamName ='Thangavelu'
+
+
+myFname.length > myFamName.length ?console.log('Your first name, '+myFname+'is longer than your family name, '+myFamName) :console.log('Your first name, '+myFname+'is shorter than your family name '+myFamName)
+
+// Question-12 Declare two variables myAge and yourAge and assign them initial values and myAge and yourAge.
+
+/*let myAge = 250
+let yourAge = 25 
+
+I am 225 years older than you.
+*/
+
+
+const myAge = 250;
+const yourAge =25;
+
+let diffAge = myAge - yourAge
+
+console.log('I am '+ diffAge  + ' years older than you')
+
+// Question-13 Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
+
+// const bornYear = Number(prompt('Enter the year:'))
+// const eligibleAge  =  date.getFullYear() - bornYear
+
+// if(eligibleAge >=18){
+//     console.log(`You are ${eligibleAge} you are old enough to drive`)
+// }else {
+//      console.log(`You are ${eligibleAge}.you will be allowed to drive after ${18 - eligibleAge} years` )
+//}
+
+console.log('Age Validator')
+
+// Question-14 Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
+
+// let secondsInseconds = 60;
+// let secondsInHour = secondsInseconds * 60;
+// let secondsInDay = secondsInHour * 24;
+// let secondsInYear = secondsInDay * 365;
+// let yearsLive = Number(prompt("how many years have you live?"));
+// let secondsOld = yearsLive * secondsInYear;
+// console.log(`you lived ${secondsOld} seconds`)
+
+console.log('Seconds persons lived')
+
+// Question-15 Create a human readable time format using the Date time object
+
+let YYYMMDD = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}`
+let DDMMYYYY = `${date.getDate()}-${date.getMonth()}-${date.getFullYear()} ${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}`
+let DdMmYYy = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}`
+console.log(YYYMMDD);
+console.log(DDMMYYYY);
+console.log(DdMmYYy);
+
+
+// ***********************Exercises: Level 3*****************************
+
+// Question-1 Create a human readable time format using the Date time object. The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 )
+
+
 

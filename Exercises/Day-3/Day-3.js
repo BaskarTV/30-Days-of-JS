@@ -274,5 +274,15 @@ console.log(DdMmYYy);
 
 // Question-1 Create a human readable time format using the Date time object. The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 )
 
+const Hdate = new Date();
+const datevalues = [
+   Hdate.getFullYear(),
+   Hdate.getMonth()+1,
+   Hdate.getDate(),
+   Hdate.getHours(),
+   Hdate.getMinutes(),
+   Hdate.getSeconds(),
+];
+console.log(datevalues)
 
 

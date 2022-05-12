@@ -181,7 +181,7 @@ console.log('Weekend or Working day check')
 // Question-1 Write a program which tells the number of days in a month.
 
 
-let month = prompt("enter month to check number of days");
+/*let month = prompt("enter month to check number of days");
 
 let getMonth = month.toLowerCase()
 switch (getMonth) {
@@ -195,7 +195,7 @@ switch (getMonth) {
         console.log(`${getMonth} has 31 days`)
         break;
     case "april":
-    case "june":
+    case "june":``
     case "september":
     case "november":
         console.log(`${getMonth} has 30 days`)
@@ -205,4 +205,7 @@ switch (getMonth) {
         break;
     default:
         console.log("invalid month entered");
-}
+}*/
+
+console.log('Days in a Month')
+

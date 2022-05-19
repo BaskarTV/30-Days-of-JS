@@ -210,5 +210,41 @@ console.log(fullStack.concat(frontEnd,backEnd))
 
 //************************* */ Exercise: Level 3**************************************
 
+// Question-1 The following is an array of 10 students ages:
+
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+
+// **Sort the array and find the min and max age
+
+let arrLen = ages.length 
+
+console.log(ages.sort())
+let min = ages[0]
+let max = ages[arrLen-1]
+console.log(`Min ${min}`)
+console.log(`Max ${max}`)
+
+// **Find the median age(one middle item or two middle items divided by two)
+var middle = arrLen/2;
+( (arrLen % 2) == 0 ) ? console.log(`Middle: ${ages[middle]}`) : console.log(`Middles: ${ages[middle]} ${ages[middle + 1]}`)
+
+// ***Find the average age(all items divided by number of items)
+
+console.log(Math.abs(min - ages[middle]) == Math.abs(max - ages[middle]))
 
 
+
+// Question-2 Find the middle country(ies) in the countries array
+
+var middleIndexCountry = Math.trunc(countries.length/2)
+console.log(countries[middleIndexCountry])
+
+
+
+// Question-3 Divide the countries array into two equal arrays if it is even. If countries array is not even , one more country for the first half.
+
+var middleIndexCountry = Math.floor(countries.length/2)
+var newCountries = [countries.slice(0,middleIndexCountry), countries.slice(middleIndexCountry)]
+if((countries.length % 2) == 1){
+  newCountries[0].push("Brazil")
+}

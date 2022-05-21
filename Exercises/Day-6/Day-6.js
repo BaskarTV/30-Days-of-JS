@@ -98,3 +98,75 @@ for(let i = 0; i <= 10; i++){
    }
 
 // Question-9 Use for loop to iterate from 0 to 100 and print only prime numbers
+let num =100     
+for(let i=2; i*i <=num; i++){
+     if(num % i ==0){
+         console.log('Prime:',i)
+     }
+    }
+
+// Question-10 Use for loop to iterate from 0 to 100 and print the sum of all numbers.
+
+// The sum of all numbers from 0 to 100 is 5050.
+
+let sum = 0;
+for(let i = 0; i <= 100; i++) {
+   sum += i;
+ console.log("Sum of 0-100: ", sum);
+}
+
+
+// Question-11 Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+
+// The sum of all evens from 0 to 100 is 2550. And the sum of all odds from 0 to 100 is 2500.
+
+let sumOdd = 0
+let sumEven = 0
+
+for(let i = 0; i <=100; i++){
+    if((i % 2)===0){
+        sumEven += i
+    }else {
+          sumOdd += i
+    }
+    console.log(sumEven, sumOdd)
+}
+
+// Question-12 Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array
+
+console.log([sumEven,sumOdd])
+
+//Question-13  Develop a small script which generate array of 5 random numbers
+
+let randomNum = []
+
+for(let i = 0; i <5; i++){
+    randomNum.push(parseInt(Math.PI * Math.random() * 100 + 3))
+}
+console.log("RandomNum:",randomNum)
+
+// Question-14 Develop a small script which generate array of 5 random numbers and the numbers must be unique
+
+let uniqueRandoNum = []
+
+for(let i = 0; i <5; i++){
+   let numbers = parseInt(Math.PI * Math.random() * 100 + i)
+   if(uniqueRandoNum.indexOf(numbers) == -1){
+       uniqueRandoNum.push(numbers)
+   }
+   console.log('UniqueNum:',uniqueRandoNum)
+}
+
+// Question-15 Develop a small script which generate a six characters random id:
+
+let characters ='abcdefghijklmnopqrstuvwxyz';
+
+let randomChar =[]
+
+for(let i =0; i < 6; i++){
+    if((i % 2)==0){
+        randomChar.push(i)
+    }else randomChar.push(characters[parseInt(Math.random() * 25)])
+
+    console.log(randomChar.join(""))
+}

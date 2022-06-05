@@ -169,4 +169,16 @@ for(let i =0; i < 6; i++){
     }else randomChar.push(characters[parseInt(Math.random() * 25)])
 
     console.log(randomChar.join(""))
+
 }
+
+// **************Exercises: Level 2*********************
+
+// Question-1 Develop a small script which generate any number of characters random id:
+
+
+let multiCharacter ='123456789abcdefghijklmnopqrstuvwxyz'
+
+
+let randomid =[]
+

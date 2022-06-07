@@ -307,7 +307,7 @@ console.log(sumOfOdds(100))
 
 
 function sumOfEven(num){
-    if(num <= 0) return 0;
+    if(num <= 0) return 0;` `
     num = num % 2 == 0 ? num -1 :num;
     return num + sumOfEven(num -2)
 }

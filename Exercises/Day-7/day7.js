@@ -312,3 +312,340 @@ function sumOfEven(num){
     return num + sumOfEven(num -2)
 }
 console.log(sumOfEven(100))
+
+
+// 13 .Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+
+let even =0
+let odd =0
+
+ function evensAndOdds(num){
+    for(let i =0; i <=100;  i++){
+        if(i % 2 ===0){
+         even += i
+        }else {
+            odd += i
+        }
+    }
+    console.log(`The sum of all even numbers are ${even}`)
+    console.log(`The sum of all odd number are ${odd}`)
+}
+
+evensAndOdds(100)
+
+// 14.Write a function which takes any number of arguments and return the sum of the arguments
+
+function sumOfArgument(...args){
+    let  sum =0
+    for(const x of args){
+    sum  += x
+
+    }
+    return sum
+}
+
+console.log('SumOfArgs =',sumOfArgument(1,2,3,4,5))
+
+// 15 Writ a function which generates a randomUserIp.
+
+function randomUserIp(){
+  let  a = parseInt(Math.random() * 255)
+  let b = parseInt(Math.random() * 255)
+  let c = parseInt(Math.random() * 255)
+  let d = parseInt(Math.random() * 255)
+
+  return `${a}.${b}.${c}.${d}`
+}
+
+console.log('Ip Adrr:',randomUserIp())
+
+
+//16. Write a function which generates a randomMacAddress
+
+function randomMacAddress(){
+    let randomaddr =[]
+    let randomChar ='0123456789ABCDEF'
+
+    for(let i =0; i<=6; i++){
+        let mID1= Math.ceil(Math.random() *15)
+        let mID2 = Math.ceil(Math.random() *15)
+
+        randomaddr.push(randomChar[mID1] + randomChar[mID2])
+    }
+  return randomaddr.join(':')
+}
+
+console.log('MacAdrr:',randomMacAddress())
+
+
+// 17. Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
+
+function randomHexaNumberGenerator() {
+  let literal = '0123456789ABCDEF';
+  
+  let hex = [];
+  let len = Math.floor(Math.random() * 11);
+  for(let i=0; i < len; i++) {
+    let index= Math.ceil(Math.random() * literal.length) -1;
+    hex.push(literal[index]);
+  }
+  
+  return '#' + hex.join('');
+
+}
+
+console.log('HexId:',randomHexaNumberGenerator())
+
+
+// Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
+
+function randomUserIdGenerator() {
+  let literal = `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`;
+  let id = [];
+  for(let x=0; x<7; x++) {
+    let index = Math.ceil(Math.random() * literal.length)-1;
+     id.push(literal[index])
+   }
+   return id.join('');
+}
+
+
+console.log('UserId:',randomUserIdGenerator())
+
+
+
+// ********************************Exercise Level-3***********************************************
+
+// 1. Modify the userIdGenerator function. Declare a function name userIdGeneratedByUser. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated.
+
+// function userIdGeneratedByUser(){
+   
+//    let len = parseInt(prompt('Enter Length of ID: '))
+//    let char = parseInt(prompt('Enter No of IDs: '))
+//    let character = '0123456789abcdefg'
+
+// let  userId = []
+   
+// for(let x =1; x<=char; x ++){
+//     let rands =[]
+//     for(let i =1; i <=len; i++){
+//         rands.push(character[Math.floor(Math.random() * character.length) -1])
+//     }
+//     userId.push(rands.join(''))
+// }
+// return userId
+    
+// }
+
+// console.log(userIdGeneratedByUser())
+
+
+// 2. Write a function name rgbColorGenerator and it generates rgb colors.
+
+
+function rgbColorGenerator(){
+    let red = parseInt(Math.random() * 255) 
+    let green = parseInt(Math.random() * 255)
+    let blue = parseInt(Math.random() * 255)
+
+    return `rgb(${red},${green},${blue})`
+}
+console.log(rgbColorGenerator())
+
+// 3. Write a function arrayOfHexaColors which return any number of hexadecimal colors in an array.
+
+function arrayOfHexaColors(){
+    let hexNum  = '01232456789abcef';
+    let loopCount = parseInt(Math.random() * 10)
+let  hexArr = []
+
+for(let x =1 ; x <= loopCount; x ++){
+    let hexChar = []
+    for(let i = 1; i < 6; i++ ){
+        hexChar.push(hexNum[parseInt(Math.random() * hexNum.length) -1])
+    }
+    hexArr.push('#' + hexChar.join(''))
+}
+return hexArr;
+
+}
+console.log(arrayOfHexaColors())
+
+// 4.Write a function arrayOfRgbColors which return any number of RGB colors in an array.
+
+
+function arrayOfRgbColors(){
+    let rgbArr =[]
+    let r = parseInt(Math.random() * 255)
+    let g = parseInt(Math.random() * 255)
+    let b = parseInt(Math.random() * 255)
+
+    rgbArr.push(r,b,g)
+
+    return rgbArr
+
+}
+
+console.log("Array Of RGB:",arrayOfRgbColors())
+
+// 8. Call your function shuffleArray, it takes an array as a parameter and it returns a shuffled array
+
+function shuffleArray(arr){
+    for(let i= arr.length-1; i  >0; i--){
+        let j = Math.floor(Math.random() * (i + 1))
+
+     let temp = arr[i];
+     arr[i] = arr[j]
+     arr[j] =temp
+    
+    }
+   return arr
+}
+ 
+console.log(shuffleArray([1,2,3,4,5,6,7,8,9,0]))
+
+// 9. Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
+
+function factorial(num){
+    if(num <=1) {
+        return 1;
+    }else{
+        return num * factorial(num -1)
+    }
+}
+
+console.log(factorial(4))
+
+// 10.Call your function isEmpty, it takes a parameter and it checks if it is empty or not
+
+let isEmpty = (arg) => !Boolean(arg.length);
+
+console.log(isEmpty(Array()))
+
+
+// 11. Call your function sum, it takes any number of arguments and it returns the sum.
+
+function sum (...args){
+ let total =0
+ for(const elem of args){
+    total += elem
+
+ }
+ return total
+}
+
+console.log(sum(2,3,4,5,11,10,5))
+
+// 12.Write a function called sumOfArrayItems, it takes an array parameter and return the sum of all the items. Check if all the array items are number types. If not give return reasonable feedback.
+
+// let sumOfArrayItems = (arr) => {
+//   let sum = 0;     
+//   for(const i of arr) 
+//     sum += i      
+//   return sum;
+// }
+
+// console.log(sumOfArrayItems())
+
+// 13.Write a function called average, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback.
+
+let average = (arr) => {
+  return sumOfArrayItems(arr) / arr.length;
+}
+
+// 14. Write a function called modifyArray takes array as parameter and modifies the fifth item of the array and return the array. If the array length is less than five it return 'item not found'.
+
+let modifyArray = arr => {
+  if(arr.length < 5) return 'Item Not Found!';
+  arr[4] = arr[4].toUpperCase();
+  return arr;
+}
+
+
+// 15. Write a function called isPrime, which checks if a number is prime number.
+
+
+let isPrime = num => {
+   if(num <= 0 || num == 1) return false; 
+   if(num == 2 || num == 3) return true;    
+   
+   for(let i=1; i<=Math.sqrt(num); i++) {
+     if(num % i == 0) return false;      
+   }
+   return true;     
+}
+
+// 16.Write a functions which checks if all items are unique in the array.
+
+function areAllUnique(arr) {
+  for(let x = 1; x < arr.length; x++) {
+    for(let i = 0; i< x; i++) {
+      if(arr[x] == arr[i])
+        return false;
+    }
+  } return true;
+}
+
+// 17.Write a function which checks if all the items of the array are the same data type.
+
+
+
+let areSameType = arr => {
+  let type = typeof arr[0];
+  for(const i of arr) {
+    if(type != i)
+      return false;      
+  }
+  return true;
+}
+
+
+
+// 18.JavaScript variable name does not support special characters or symbols except $ or _. Write a function isValidVariable which check if a variable is valid or invalid variable.
+
+
+
+
+
+function isValidVariable(varName) {
+  let regex = /[_|\$|a-z|A-Z|0-9]+/;
+  return regex.test(varName);
+}
+
+// 19  Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
+
+
+
+let getUniqueRands = () => {
+  let arr = [];
+  for(let i = 0; i<7; i++) {
+    let random = Math.ceil(Math.random() * 9);
+    
+    let isUnique = true;
+    for(const x of arr) {
+      if(random == x) {
+        isUnique = false;
+        break;
+      }
+    }
+    if(isUnique) arr.push(random);
+  }
+  return arr; 
+}
+
+// 20. Write a function called reverseCountries, it takes countries array and first it copy the array and returns the reverse of the original array
+
+
+
+
+
+function reverseCountries (arr) {
+  let copy = arr.slice(0, arr.length);
+  
+  let index = 0;
+  for(let i=arr.length-1; i>=0; i--) { 
+    arr[index] = copy[i];
+    index++;
+  }
+  return arr;
+} 

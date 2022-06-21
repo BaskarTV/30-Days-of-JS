@@ -636,9 +636,6 @@ let getUniqueRands = () => {
 // 20. Write a function called reverseCountries, it takes countries array and first it copy the array and returns the reverse of the original array
 
 
-
-
-
 function reverseCountries (arr) {
   let copy = arr.slice(0, arr.length);
   
@@ -649,3 +646,5 @@ function reverseCountries (arr) {
   }
   return arr;
 } 
+
+

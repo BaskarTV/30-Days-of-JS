@@ -452,3 +452,4 @@ let likeProduct = (userId, productNo) => {
 }
 
 likeProduct('venom23', 1);
+

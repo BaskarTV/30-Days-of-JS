@@ -1,6 +1,8 @@
 // ************Higer Order function or Callback Functions******************
 
 
+
+
 //  Callback function 
 
 const callback = (n) =>{
@@ -311,7 +313,7 @@ const users = [
 
 // Variable names modified as it is already in the partices in the Examples sections
 
-const countries1 = ['Finland', 'Sweden', 'Denmark', 'Norway', 'IceLand']
+const countries1 = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
 const names1 = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
 const numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 const products1 = [
@@ -412,3 +414,100 @@ console.log(letterWithE);
 const priceWithValues = products1.filter((product) => product.price > 0)
 
 console.log(priceWithValues)
+
+// 16.Declare a function called getStringLists which takes an array as a parameter and then returns an array only with string items.
+
+const getStringLists = (arr) => {
+    let string = arr.filter(item => {
+        return typeof item === 'string'
+    })
+    return string
+}
+console.log(getStringLists(['google', 5, 'Microsoft', 6]))
+
+// 17.Use reduce to sum all the numbers in the numbers array.
+
+const reduceNum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue);
+
+console.log(reduceNum)
+
+// 18.Use reduce to concatenate all the countries and to produce this sentence: Estonia, Finland, Sweden, Denmark, Norway, and IceLand are north European countries
+ 
+let text ="are north European countries"
+
+const europeanCountries = countries1.reduce((accumulator, currentValue) =>`${accumulator},${currentValue}`)
+
+console.log("Estonia",europeanCountries,`${text}`)
+
+// 19.Explain the difference between some and every
+
+//Some Determines whether the specified callback function returns true for any element of an array.
+
+let someArr = countries1.some((value) => value.length > 6)
+
+console.log(someArr)
+
+// every Determines whether all the members of an array satisfy the specified test.
+
+let everyArr = countries1.every((value) => value.toLowerCase().includes('land'))
+
+console.log(everyArr)
+
+
+
+// 20.Use some to check if some names' length greater than seven in names array
+
+let someNames = names1.some((names) => names.length > 7)
+
+console.log(someNames)
+
+// 21. Use every to check if all the countries contain the word land
+
+let everyCountries = countries.every((country) => country.toLowerCase().includes('land'))
+
+
+console.log(everyCountries)
+
+// 22.Explain the difference between find and findIndex.
+
+// find: Return the first element which satisfies the condition
+
+// Example:
+
+const  findeArr = numbers1.find((num) => num < 10)
+
+console.log(findeArr)
+
+// findIndex: Return the position of the first element which satisfies the condition
+
+// Example:
+
+const findeIndexArr = numbers1.findIndex((num) =>  num < 10)
+
+console.log(findeIndexArr)
+
+// 23.Use find to find the first country containing only six letters in the countries array
+
+const firstCountry = countries1.find((country) => country.length > 6)
+
+console.log(firstCountry)
+
+// 24.Use findIndex to find the position of the first country containing only six letters in the countries array
+
+const firstIndexCountry = countries1.findIndex((country) => country.length <= 6)
+
+console.log(firstIndexCountry)
+
+
+// 25.Use findIndex to find the position of Norway if it doesn't exist in the array you will get -1.
+
+const findNorway = countries1.findIndex((country) => country.includes('Norway'))    
+
+console.log(findNorway)
+
+// 26.Use findIndex to find the position of Russia if it doesn't exist in the array you will get -1.
+
+const findRussia = countries1.findIndex((country) => country.includes('Russia'))
+
+console.log(findRussia)
+

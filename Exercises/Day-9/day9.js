@@ -3,6 +3,13 @@
 
 
 
+// Countries data import variable names changed due to variables duplications 
+
+import {data} from './coutries.js'
+
+
+
+
 //  Callback function 
 
 const callback = (n) =>{
@@ -87,7 +94,7 @@ let wishing = 'hello'
 function greetings(){
  console.log(`${wishing} ${user} Welcome back`)
 }
-setTimeout(greetings, 2000)
+setTimeout(greetings, 500)
 
 
 
@@ -507,7 +514,88 @@ console.log(findNorway)
 
 // 26.Use findIndex to find the position of Russia if it doesn't exist in the array you will get -1.
 
-const findRussia = countries1.findIndex((country) => country.includes('Russia'))
+const findRussia = countries1.findIndex((country) =>country.includes('Russia'))
 
 console.log(findRussia)
 
+// *****************************Exercises: Level 2******************
+
+// 1.Find the total price of products by chaining two or more array iterators(eg. arr.map(callback).filter(callback).reduce(callback))
+
+const totalPrice = products1.map((product) => {
+    return product.price
+}).filter(price => {
+    return price > 0
+}).reduce((accumulator, currentValue) =>{
+    return accumulator + currentValue
+})
+
+console.log('TotalPrice:' ,totalPrice)
+
+// 2.Find the sum of price of products using only reduce reduce(callback))
+
+// const products1 = [
+//     { product: 'banana', price: 3 },
+//     { product: 'mango', price: 6 },
+//     { product: 'potato', price: ' ' },
+//     { product: 'avocado', price: 8 },
+//     { product: 'coffee', price: 10 },
+//     { product: 'tea', price: '' },
+//   ]
+
+
+  const sumOfProduct =  products1.reduce((accumulator, currentValue) => accumulator + currentValue.price,0)
+  console.log(sumOfProduct)
+
+//***Unable to solve in pending
+
+// 3.Declare a function called categorizeCountries which returns an array of countries which have some common pattern(you find the countries array in this repository as countries.js(eg 'land', 'ia', 'island','stan')).
+
+const categorizeCountries = (countries) => {
+    let coun = countries.filter(country => {
+        return country.toLowerCase().includes("ia") || country.toLowerCase().includes("island") || country.toLowerCase().includes("land") || country.toLowerCase().includes("stan");
+    })
+    return coun;
+}
+console.log(categorizeCountries(countries));
+
+// 4.Create a function which return an array of objects, which is the letter and the number of times the letter use to start with a name of a country.
+
+// 5.Declare a getFirstTenCountries function and return an array of ten countries. Use different functional programming to work on the countries.js array
+
+let n = 10
+const firstTenCoutries = data.slice(0,n).map(countries => {
+    return countries.name
+})
+
+console.log(firstTenCoutries);
+
+
+// 6.Declare a getLastTenCountries function which which returns the last ten countries in the countries array.
+
+let N = 10
+
+const lastTenCountries = data.slice(-11,-1).map(countries => {
+    return countries.name
+})
+
+console.log(lastTenCountries)
+
+
+
+// 7.Find out which letter is used many times as initial for a country name from the countries array (eg. Finland, Fiji, France etc)
+const frequentFirstLetter = Object.entries(data.map(c => c[0]).reduce((acc,cur) => {
+    acc[cur] = (acc[cur] || 0) +1;
+    return acc;
+ }, {})).reduce((obj, cur) => {
+    obj.max = (obj.max || cur[1]);
+    obj.letter = (obj.letter || '');
+ 
+    if (obj.max < cur[1]) {
+       obj.max = cur[1];
+       obj.letter = cur[0];
+    }
+    return obj;
+ }, {}).letter;
+ 
+ console.log(frequentFirstLetter);

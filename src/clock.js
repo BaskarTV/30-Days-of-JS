@@ -81,3 +81,14 @@ axios.get('https://api.quotable.io/random?tags=technology,famous-quotes')
    
 })
 .catch(error => console.log(error))
+
+
+
+// Page-Preloader
+
+const fadeout = () =>{
+    const loadeWrapper = document.querySelector('.wrapper');
+    loadeWrapper.classList.add('fade')
+}
+
+window.addEventListener('load', fadeout);

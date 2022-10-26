@@ -1,62 +1,74 @@
-html,body{
-   position: relative;
-}
 
-body{
-   overflow:auto;
-}
 
 
 .hero-image {
   
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/images/Learn.jpg");
-
-  
-  height: 80vh;
+  background-image: linear-gradient(#eeaeca, #94e9d5);
+  height:55vh;
   background-position: center ;
-  background-size: cover;
   background-repeat: no-repeat;
-   text-align:center ;
+  background-size: cover;
+  text-align:center;
+  border-radius: 10px;
+  
 }
 
 
 #clock {
    font-size: 50px;
-   color:  #fff;
-   font-family: 'Orbitron';
-   border: 2px solid;
+   color:  #000;
+   font-family: 'Arial';
+   border: 1px solid;
    border-radius: 10px;    
    margin: auto;  
 }
 
 footer {
-  background: #f1f1f1;
+  background: #AEBBC9;
   width: 100%;
   padding: 16px 0px;
   color: #000;
   vertical-align: bottom;
-  margin-top: 1px;
+  margin-top: 10px;
   text-align: center;
-  width: 100%;
+
 
 }
 
 h1{
-   color:#ffffff;
-   font-family: 'Orbitron';
-   font-size: 80px;
+   color:#000;
+   font-family: 'Tangerine';
+   font-size: 10rem;
 }
 
 
 #quote{
-   font-family: 'Orbitron', Courier, monospace;
-   color:#ffffff;
-   font-size: 1rem; 
+   font-family: 'Tangerine', Courier, monospace;
+   color:#000;
+   font-size: 2.2rem; 
 }
 
 #day{
-   font-family: 'Orbitron',Arial, Helvetica, sans-serif;
-   color: #ffffff;
-   margin: 10px ;
+   font-family: 'Arial', Helvetica, sans-serif;
+   color: #000;
+   margin: 20px ;
+   font-size: 1rem;
 }
+
+/* Page Pre-loader */
+
+.wrapper{
+   position:fixed;
+   inset: 0;
+   z-index: 9999;
+   background-color: #fff;
+   display: grid;
+   place-items: center;
+   transition: opacity .25s, visibility 1s;
+   
+}
+.fade{
+   opacity: 0;
+   visibility: hidden;
+}
+

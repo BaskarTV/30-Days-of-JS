@@ -599,3 +599,47 @@ const frequentFirstLetter = Object.entries(data.map(c => c[0]).reduce((acc,cur) 
  }, {}).letter;
  
  console.log(frequentFirstLetter);
+
+
+//  ************************Exercises: Level 3***********************************
+
+// 1.Use the countries information, in the data folder. Sort countries by name, by capital, by population
+
+// countries by name
+
+const nameOfCountries = data.map(country => country.name);
+
+nameOfCountries.slice(0,10).forEach(c => console.log(c))
+
+
+// countries by capital
+
+const capitalOfCountries = data.map(country => country.capital);
+
+capitalOfCountries.slice(0,10).forEach(cap => console.log(cap))
+
+// countires by population
+
+const populationOfCountries = data.map(countries => countries.population)
+
+populationOfCountries.slice(0,10).forEach(countries=>console.log(countries))
+
+
+
+
+//2.*** Find the 10 most spoken languages:
+
+let mostSpoken = Object.entries(data.reduce((langs, obj) => { obj.languages.forEach(x => langs.push(x));
+    return langs;
+ }, []).reduce((dict, lang) => {
+    dict[lang] = (dict[lang] || 0) +1;
+    return dict;
+ }, {})).sort((a, b) => b[1]-a[1]);
+ mostSpoken.forEach(x => console.log(x));
+ 
+ // 
+ function sortByMostPopulated (countries) { 
+   let mostPopulated = countries.sort((a, b) => b.population - a.population);
+   return mostPopulated;
+ }
+ 

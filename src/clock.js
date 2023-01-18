@@ -9,7 +9,7 @@ function showTime (){
     var merdian = "AM"
     
 
-    if(hour ==0){
+    if(hour == 0){
         hour=12;
     }
     if(hour > 12){

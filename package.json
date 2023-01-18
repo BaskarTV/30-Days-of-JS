@@ -16,7 +16,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon day9.js"
+    "dev": "nodemon day18.js "
   },
   "repository": {
     "type": "git",

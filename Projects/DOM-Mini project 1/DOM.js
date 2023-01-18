@@ -27,7 +27,6 @@ const getColors = () => {
 
 
 
-let mynum = 233474;
 
 // h1 Tag 
 
